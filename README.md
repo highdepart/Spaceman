@@ -34,3 +34,8 @@ As a player, I want to be able to reset the game whenever I deem necessary. 
 As a developer, I want to create an interactive environment that is visually pleasing
 
 #### Stretch Goals
+
+As a developer, I would like a loss animation of having the rocket ship take off.
+As a developer, I would like animation of the spaceship being built, throughout the game. 
+As a developer, I would like to build different levels of difficulty.
+As a developer, I would like my spaceman to taunt the player on wrongly guessed letters.
