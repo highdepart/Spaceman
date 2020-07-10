@@ -15,8 +15,11 @@ My app is called Spaceman. It's a game where players are provided a string of b
 ## Wire Frames
 
 **Initial Landing View**
-
-**Results View**
+![Screen Shot 2020-07-10 at 9 01 07 AM](https://media.git.generalassemb.ly/user/28784/files/f41ceb00-c28b-11ea-818c-70debaafdd57)
+**Results View of a loss**
+![Screen Shot 2020-07-10 at 9 08 56 AM](https://media.git.generalassemb.ly/user/28784/files/03e8ff00-c28d-11ea-8349-5e45ff544bbc)
+**Results View of a win**
+![Screen Shot 2020-07-10 at 9 11 25 AM](https://media.git.generalassemb.ly/user/28784/files/5f1af180-c28d-11ea-8dcb-5bfbfa0edcad)
 
 ## User Stories
 
