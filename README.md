@@ -25,17 +25,17 @@ My app is called Spaceman. It's a game where players are provided a string of b
 
 #### MVP Goals
 
-As a player, I want my game to recognize my letter input, so I know if I was right or wrong. 
-As a player, I want to know the letters that have already been guessed, that were correct. 
-As a player, I want to know the letters that have already been guessed, that were wrong. 
-As a player, I want to know when I have won the game. 
-As a player, I want to know when I have lost the game.
-As a player, I want to be able to reset the game whenever I deem necessary. 
-As a developer, I want to create an interactive environment that is visually pleasing
+- As a player, I want my game to recognize my letter input, so I know if I was right or wrong.
+- As a player, I want to know the letters that have already been guessed, that were correct.
+- As a player, I want to know the letters that have already been guessed, that were wrong.
+- As a player, I want to know when I have won the game.
+- As a player, I want to know when I have lost the game.
+- As a player, I want to be able to reset the game whenever I deem necessary.
+- As a developer, I want to create an interactive environment that is visually pleasing
 
 #### Stretch Goals
 
-As a developer, I would like a loss animation of having the rocket ship take off.
-As a developer, I would like animation of the spaceship being built, throughout the game. 
-As a developer, I would like to build different levels of difficulty.
-As a developer, I would like my spaceman to taunt the player on wrongly guessed letters.
+- As a developer, I would like a loss animation of having the rocket ship take off.
+- As a developer, I would like animation of the spaceship being built, throughout the game.
+- As a developer, I would like to build different levels of difficulty.
+- As a developer, I would like my spaceman to taunt the player on wrongly guessed letters.
