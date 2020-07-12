@@ -16,9 +16,39 @@ openBtn.addEventListener('click', openModal);
 
 close.addEventListener('click', closeModal);
 
-let wordBank = ['bike', 'dog', 'cat', 'bed', 'house'];
+// Grabbing Element for letter guess button
+let enterBtn = document.querySelector('#enterGuess');
+// Function for letter guess button
+function playerGuess(event) {
+	event.preventDefault();
+	let userInput = document.querySelector('.input').value;
+	if (userInput === 'e') {
+		console.log('hello there mike');
+	} else {
+		console.log('hello there bob');
+	}
+}
+// Event listener for Letter Guess button
+enterBtn.addEventListener('click', playerGuess);
 
-// function to breakdown array (wordBank) into single characters
-wordBank.forEach((word, index) => (wordBank[index] = `${word.split('')}`));
+// let wordBank = ['bike', 'dog', 'cat', 'bed', 'house'];
+// // function to breakdown array (wordBank) into single characters
+// wordBank.forEach((word, index) => (wordBank[index] = `${word.split('')}`));
 
-console.log(wordBank[0]);
+// console.log(wordBank[0]);
+
+// const words = {
+// 	word1: "Bike",
+// 	word2: "dog",
+// 	word3: "cat",
+// 	wordGuess: function playerGuess (guess) {
+// 		if (guess === this.word1 || guess === this.word2) {
+// 			let splitWord = this.word1.split("")
+// 			console.log(splitWord);
+
+// 		}
+
+// 	}
+
+// };
+// words.wordGuess("dog");
