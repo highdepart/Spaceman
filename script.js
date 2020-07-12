@@ -16,3 +16,14 @@ openBtn.addEventListener('click', openModal);
 
 close.addEventListener('click', closeModal);
 
+let wordBank = ['bike', 'dog', 'cat', 'bed', 'house'];
+let newWordBank = [''];
+
+// function to breakdown array into single characters
+function retrieveWords() {
+	for (let i = 0; i < wordBank.length; i++) {
+		newWordBank[i] = wordBank[i].split('');
+	}
+	return newWordBank;
+}
+console.log(retrieveWords()[2]);
