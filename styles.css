@@ -6,7 +6,7 @@
 }
 #modal {
 	background-color: rgba(0, 0, 0, 0.4);
-	/* position: fixed; */
+	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
@@ -45,7 +45,7 @@
 #lettersGuessed {
 	/* visibility: hidden; */
 	font-size: 45px;
-	font-family: 'Megrim', cursive;
+	font-family: 'Monoton', cursive;
 	padding-left: 43px;
 }
 #resetBtn {

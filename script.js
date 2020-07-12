@@ -15,3 +15,4 @@ const closeModal = () => {
 openBtn.addEventListener('click', openModal);
 
 close.addEventListener('click', closeModal);
+
