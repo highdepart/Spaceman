@@ -2,8 +2,12 @@
 const openBtn = document.getElementById('howToPlayModal');
 const modal = document.getElementById('modal');
 const close = document.getElementById('close');
-// Element for hidden word
+// Grabbing Element for hidden word
 const wordPop = document.getElementById('wordPop');
+// Grabbing Element for incorrect Guesses
+const wrongGuess = document.querySelectorAll('li');
+console.log(wrongGuess);
+
 //Functions for How To Play Button
 const openModal = () => {
 	modal.style.display = 'block';
@@ -17,7 +21,7 @@ openBtn.addEventListener('click', openModal);
 
 close.addEventListener('click', closeModal);
 
-let wordBank = ['bike'];
+let wordBank = ['BIKE'];
 // function to breakdown array (wordBank) into single characters
 
 // Randomizes the selection from the wordBank
@@ -29,36 +33,38 @@ for (let i = 0; i < randomWordChoice.length; i++) {
 	letter.innerText = '_____';
 	letter.classList.add('letter');
 	wordPop.appendChild(letter);
-	console.log(randomWordChoice);
 }
-console.log(letter);
 
 // Grabbing Element for letter guess button
 let enterBtn = document.querySelector('#enterGuess');
 // Function for letter guess button
+let numberOfWrongGuesses = 0;
 function playerGuess(event) {
 	event.preventDefault();
+	// variable takes the word and splits into single letters
 	let randomWordChoiceLetters = randomWordChoice.split('');
-	console.log(randomWordChoiceLetters[0]);
-	let userInput = document.querySelector('.input').value;
+	// user input
+	let userInput = document.querySelector('.input').value.toUpperCase();
+	const blankSpaces = document.querySelectorAll('.letter');
+
 	if (userInput === randomWordChoiceLetters[0]) {
-		console.log('hello Mike');
+		blankSpaces[0].innerText = userInput;
 	} else if (userInput === randomWordChoiceLetters[1]) {
-		console.log('hello mike');
+		blankSpaces[1].innerText = userInput;
 	} else if (userInput === randomWordChoiceLetters[2]) {
-		console.log('hello Mike');
+		blankSpaces[2].innerText = userInput;
 	} else if (userInput === randomWordChoiceLetters[3]) {
-		console.log('hello there mike');
+		blankSpaces[3].innerText = userInput;
 	} else if (userInput === randomWordChoiceLetters[4]) {
-		console.log('hello there mike');
+		blankSpaces[4].innerText = userInput;
 	} else if (userInput === randomWordChoiceLetters[5]) {
-		console.log('hello there mike');
+		blankSpaces[5].innerText = userInput;
 	} else if (userInput === randomWordChoiceLetters[6]) {
-		console.log('hello there mike');
-	} else if (userInput === randomWordChoiceLetters[7]) {
-		console.log('hello there mike');
+		blankSpaces[6].innerText = userInput;
 	} else {
-		console.log('hello there bob');
+		wrongGuess[numberOfWrongGuesses].innerText = userInput;
+		numberOfWrongGuesses++;
+		console.log(numberOfWrongGuesses);
 	}
 }
 // Event listener for Letter Guess button
