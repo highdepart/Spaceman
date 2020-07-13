@@ -16,10 +16,14 @@
         <header>
             <h1 id="header">SPACEMAN</h1>
         </header>
-        <!-- Section for Letter Bank -->
-        <section id="letterBank"> <u>Incorrect Guesses </u> </section>
-        <aside id="lettersGuessed">
-              <ol class="wrongLetters">
+		<!-- GameBoard -->
+		<section class="gameBoard">
+
+		</section>
+		<!-- Section for Incorrect Letter Bank -->
+		<nav id="incorrectLetterBank"> <u>Incorrect Guesses </u> </nav>
+       		 <aside id="lettersGuessed">
+             	 <ol class="wrongLetters">
                   <li id="wrongGuess1">  </li>
                   <li id="wrongGuess2">  </li>
                   <li id="wrongGuess3">  </li>
@@ -28,7 +32,7 @@
                   <li id="wrongGuess6">  </li>
               </ol>  
 		</aside>
-		<form>
+		<form class="lettersGuessedArea"> 
 			<input type="text" class="input" placeholder="Letter Guess"></input>
 			<button class="input" id="enterGuess">Enter</button>
 		</form>	
@@ -54,6 +58,9 @@
 		</div>
         <section id="reset"></section>
             <button id="resetBtn">Reset</button>
-		<script src="script.js"></script>
+		<footer id="wordPop"></footer>
+		
+			<script src="script.js"></script>
+		
 	</body>
 </html>

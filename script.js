@@ -2,7 +2,7 @@
 const openBtn = document.getElementById('howToPlayModal');
 const modal = document.getElementById('modal');
 const close = document.getElementById('close');
-
+const wordPop = document.getElementById('wordPop');
 //Functions for How To Play Button
 const openModal = () => {
 	modal.style.display = 'block';
@@ -30,25 +30,38 @@ function playerGuess(event) {
 }
 // Event listener for Letter Guess button
 enterBtn.addEventListener('click', playerGuess);
+//
+//
+//
+//
+//
+let wordBank = ['bike', 'dog', 'cat', 'bed', 'house'];
+// function to breakdown array (wordBank) into single characters
 
-// let wordBank = ['bike', 'dog', 'cat', 'bed', 'house'];
-// // function to breakdown array (wordBank) into single characters
-// wordBank.forEach((word, index) => (wordBank[index] = `${word.split('')}`));
+console.log(wordBank);
+const random = wordBank[Math.floor(Math.random() * wordBank.length)];
 
-// console.log(wordBank[0]);
+console.log(random);
+
+for (let i = 0; i < random.length; i++) {
+	const letter = document.createElement('span');
+	letter.innerText = '_';
+	letter.classList.add('letter');
+	wordPop.appendChild(letter);
+	console.log(wordBank);
+}
 
 // const words = {
 // 	word1: "Bike",
-// 	word2: "dog",
+// 	word2: "Dog",
 // 	word3: "cat",
 // 	wordGuess: function playerGuess (guess) {
 // 		if (guess === this.word1 || guess === this.word2) {
-// 			let splitWord = this.word1.split("")
+// 			let splitWord = guess.split("")
 // 			console.log(splitWord);
-
 // 		}
 
 // 	}
 
 // };
-// words.wordGuess("dog");
+// words.wordGuess("Dog");
