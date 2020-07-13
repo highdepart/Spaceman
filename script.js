@@ -31,6 +31,7 @@ for (let i = 0; i < randomWordChoice.length; i++) {
 	wordPop.appendChild(letter);
 	console.log(randomWordChoice);
 }
+console.log(letter);
 
 // Grabbing Element for letter guess button
 let enterBtn = document.querySelector('#enterGuess');
@@ -41,11 +42,11 @@ function playerGuess(event) {
 	console.log(randomWordChoiceLetters[0]);
 	let userInput = document.querySelector('.input').value;
 	if (userInput === randomWordChoiceLetters[0]) {
-		console.log('hello there mike');
+		console.log('hello Mike');
 	} else if (userInput === randomWordChoiceLetters[1]) {
-		console.log('hello there mike');
+		console.log('hello mike');
 	} else if (userInput === randomWordChoiceLetters[2]) {
-		console.log('hello there mike');
+		console.log('hello Mike');
 	} else if (userInput === randomWordChoiceLetters[3]) {
 		console.log('hello there mike');
 	} else if (userInput === randomWordChoiceLetters[4]) {
