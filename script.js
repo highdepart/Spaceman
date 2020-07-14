@@ -10,8 +10,7 @@ const wrongGuess = document.querySelectorAll('li');
 const resetBtn = document.querySelector('#resetBtn');
 // Grabbing Element for background picture
 const backgroundPic = document.querySelector('.gameBox');
-console.log(backgroundPic);
-
+const spanGrab = document.getElementsByName('');
 //Functions for How To Play Button
 const openModal = () => {
 	modal.style.display = 'block';
@@ -28,20 +27,40 @@ close.addEventListener('click', closeModal);
 // Event Listener for Reset Button
 resetBtn.addEventListener('click', resetGame);
 
-let wordBank = ["EARTH", "SOLAR", "NEPTUNE", "VENUS", "ASTEROID", "COMET", "PLANET", "MERCURY", "STAR", "UNIVERSE", "SATURN", "NEBULA", "PENUMBRA", "STARLIGHT", "SUN"];
+let wordBank = [
+	'EARTH',
+	'SOLAR',
+	'NEPTUNE',
+	'VENUS',
+	'ASTEROID',
+	'COMET',
+	'PLANET',
+	'MERCURY',
+	'STAR',
+	'UNIVERSE',
+	'SATURN',
+	'NEBULA',
+	'PENUMBRA',
+	'STARLIGHT',
+	'SUN',
+];
 
 // Randomizes the selection from the wordBank
 const randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
 
 // For loop to randomize word and add it to the page
-for (let i = 0; i < randomWordChoice.length; i++) {
-	letter = document.createElement('span');
-	letter.innerText = '_____';
-	letter.style.color = 'white';
-	letter.classList.add('letter');
-	wordPop.appendChild(letter);
+function newWordGenerator() {
+	wordPop.innerHTML = '';
+	for (let i = 0; i < randomWordChoice.length; i++) {
+		letter = document.createElement('span');
+		letter.innerText = '_____';
+		letter.style.color = 'white';
+		letter.classList.add('letter');
+		wordPop.appendChild(letter);
+	}
 }
 
+newWordGenerator();
 // Grabbing Element for letter guess button
 let enterBtn = document.querySelector('#enterGuess');
 // Variable for number of wrong guesses within the function playerGuess
@@ -77,15 +96,15 @@ function playerGuess(event) {
 		updatePic();
 	}
 }
-
 // Event listener for Letter Guess button
 enterBtn.addEventListener('click', playerGuess);
 
 // Function to reset game
 function resetGame() {
+	newWordGenerator();
 	wrongGuess.forEach((li) => (li.innerText = ' '));
-		backgroundPic.src == 'Spaceman_Slide1-final.jpg';
-	};
+	backgroundPic.src = 'Spaceman_Slide1-final.jpg';
+}
 
 // Function that updates background picture of ship.
 function updatePic() {
@@ -102,10 +121,10 @@ function updatePic() {
 	} else if (numberOfWrongGuesses == 6) {
 		backgroundPic.src = 'Spaceman_Slide7_final.jpg';
 	} else if (numberOfWrongGuesses == 7) {
-		alert("You lost and should feel bad.");
-		
+		alert('You lost and should feel bad.');
 	}
-};
+}
+
 function endOfGame() {
 	backgroundPic.src == 'Spaceman_Slide1-final.jpg';
-};
+}
