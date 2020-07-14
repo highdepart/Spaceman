@@ -54,7 +54,7 @@ function newWordGenerator() {
 	for (let i = 0; i < randomWordChoice.length; i++) {
 		letter = document.createElement('span');
 		letter.innerText = '_____';
-		letter.style.color = 'white';
+		letter.style.color = 'chartreuse';
 		letter.classList.add('letter');
 		wordPop.appendChild(letter);
 	}
@@ -128,8 +128,7 @@ function updatePic() {
 }
 
 function endOfGame() {
-	if(newWordGenerator = true) {
-		console.log("Hey hey Mike");
-		
+	if (blankSpaces[0] === true) {
+		console.log('Hey hey Mike');
 	}
 }
