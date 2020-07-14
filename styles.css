@@ -1,8 +1,7 @@
 .gameBoard {
-	display: flex;
-	justify-content: flex-end;
-	height: 5px;
-	width: 5px;
+	height: 2px;
+	width: 3px;
+	padding-bottom: 30px;
 }
 
 #header {
@@ -10,6 +9,7 @@
 	display: flex;
 	justify-content: space-evenly;
 	font-size: 65px;
+	color: white
 }
 #modal {
 	background-color: rgba(0, 0, 0, 0.4);
@@ -55,6 +55,7 @@
 	padding-left: 40px;
 	font-size: 25px;
 	font-family: 'Monoton', cursive;
+	color:white
 }
 #resetBtn {
 	padding: 14px 18px;
@@ -77,15 +78,26 @@
 	font-family: 'Megrim', cursive;
 	font-size: 20px;
 	font-weight: bolder;
+	color: white
 }
 .lettersGuessedArea {
 	display: flex;
-	justify-content: center;
 	align-items: flex-end;
+	justify-content: center;
+	
+	
 }
 .letter {
 	margin: 10px;
 }
 #wordPop {
 	text-align: center;
+}
+#background {
+	background: url(Space_image.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
 }
