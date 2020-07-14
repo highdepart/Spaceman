@@ -10,7 +10,6 @@ const wrongGuess = document.querySelectorAll('li');
 const resetBtn = document.querySelector('#resetBtn');
 // Grabbing Element for background picture
 const backgroundPic = document.querySelector('.gameBox');
-const spanGrab = document.getElementsByName('');
 //Functions for How To Play Button
 const openModal = () => {
 	modal.style.display = 'block';
@@ -77,6 +76,7 @@ function playerGuess(event) {
 	let userInput = document.querySelector('.input').value.toUpperCase();
 	// variable for all the blank letter spaces.
 	let blankSpaces = document.querySelectorAll('.letter');
+	clearButton();
 
 	if (userInput === randomWordChoiceLetters[0]) {
 		blankSpaces[0].innerText = userInput;
@@ -125,10 +125,7 @@ function updatePic() {
 	} else if (numberOfWrongGuesses == 7) {
 		alert('You lost and should feel bad. Click Start/Reset to lose again!');
 	}
-}
-
-function endOfGame() {
-	if (blankSpaces[0] === true) {
-		console.log('Hey hey Mike');
-	}
-}
+// Clears the input box for the user
+function clearButton() {
+	document.getElementById("myInput").value = "";
+};
