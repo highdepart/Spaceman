@@ -9,7 +9,7 @@ const wrongGuess = document.querySelectorAll('li');
 // Grabbing Element for Reset button
 const resetBtn = document.querySelector('#resetBtn');
 // Grabbing Element for background picture
-const backgroundPic = document.querySelector('#gameBox');
+const backgroundPic = document.querySelector('.gameBox');
 console.log(backgroundPic);
 
 //Functions for How To Play Button
@@ -74,7 +74,7 @@ function playerGuess(event) {
 	} else {
 		wrongGuess[numberOfWrongGuesses].innerText = userInput;
 		numberOfWrongGuesses++;
-		console.log(numberOfWrongGuesses);
+		updatePic();
 	}
 }
 
@@ -83,4 +83,23 @@ enterBtn.addEventListener('click', playerGuess);
 
 function resetGame() {
 	wrongGuess.forEach((li) => (li.innerText = ' '));
+	backgroundPic.src = 'Spaceman_Slide1-final.jpg';
+}
+// Function that updates background picture of ship.
+function updatePic() {
+	if (numberOfWrongGuesses == 1) {
+		backgroundPic.src = 'Spaceman_Slide2_final.png';
+	} else if (numberOfWrongGuesses == 2) {
+		backgroundPic.src = 'Spaceman_Slide3_final.jpg';
+	} else if (numberOfWrongGuesses == 3) {
+		backgroundPic.src = 'Spaceman_Slide4_final.jpg';
+	} else if (numberOfWrongGuesses == 4) {
+		backgroundPic.src = 'Spaceman_Slide5_final.jpg';
+	} else if (numberOfWrongGuesses == 5) {
+		backgroundPic.src = 'Spaceman_Slide6_final.jpg';
+	} else if (numberOfWrongGuesses == 6) {
+		backgroundPic.src = 'Spaceman_Slide7_final.jpg';
+	} else {
+		backgroundPic.src = 'Spaceman_Slide1-final.jpg';
+	}
 }
