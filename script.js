@@ -6,7 +6,8 @@ const close = document.getElementById('close');
 const wordPop = document.getElementById('wordPop');
 // Grabbing Element for incorrect Guesses
 const wrongGuess = document.querySelectorAll('li');
-console.log(wrongGuess);
+// Grabbing Element for Reset button
+const resetBtn = document.querySelector('#resetBtn');
 
 //Functions for How To Play Button
 const openModal = () => {
@@ -21,8 +22,10 @@ openBtn.addEventListener('click', openModal);
 
 close.addEventListener('click', closeModal);
 
-let wordBank = ['BIKE'];
-// function to breakdown array (wordBank) into single characters
+// Event Listener for Reset Button
+resetBtn.addEventListener('click', resetGame);
+
+let wordBank = ['BIKE', 'HELMET', 'DOG'];
 
 // Randomizes the selection from the wordBank
 const randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
@@ -37,15 +40,18 @@ for (let i = 0; i < randomWordChoice.length; i++) {
 
 // Grabbing Element for letter guess button
 let enterBtn = document.querySelector('#enterGuess');
-// Function for letter guess button
+// Variable for number of wrong guesses within the function playerGuess
 let numberOfWrongGuesses = 0;
+
+// Function for letter guess button
 function playerGuess(event) {
 	event.preventDefault();
 	// variable takes the word and splits into single letters
 	let randomWordChoiceLetters = randomWordChoice.split('');
 	// user input
 	let userInput = document.querySelector('.input').value.toUpperCase();
-	const blankSpaces = document.querySelectorAll('.letter');
+	// variable for all the blank letter spaces.
+	let blankSpaces = document.querySelectorAll('.letter');
 
 	if (userInput === randomWordChoiceLetters[0]) {
 		blankSpaces[0].innerText = userInput;
@@ -69,3 +75,7 @@ function playerGuess(event) {
 }
 // Event listener for Letter Guess button
 enterBtn.addEventListener('click', playerGuess);
+
+function resetGame() {
+	wrongGuess.forEach((li) => (li.innerText = ' '));
+}
