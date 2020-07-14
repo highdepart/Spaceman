@@ -48,7 +48,7 @@ let wordBank = [
 // Randomizes the selection from the wordBank
 const randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
 
-// For loop to randomize word and add it to the page
+// function that takes randomized word and changes into __
 function newWordGenerator() {
 	wordPop.innerHTML = '';
 	for (let i = 0; i < randomWordChoice.length; i++) {
@@ -59,10 +59,12 @@ function newWordGenerator() {
 		wordPop.appendChild(letter);
 	}
 }
-
+// Generates the new word on the page
 newWordGenerator();
+
 // Grabbing Element for letter guess button
 let enterBtn = document.querySelector('#enterGuess');
+
 // Variable for number of wrong guesses within the function playerGuess
 let numberOfWrongGuesses = 0;
 
@@ -121,7 +123,7 @@ function updatePic() {
 	} else if (numberOfWrongGuesses == 6) {
 		backgroundPic.src = 'Spaceman_Slide7_final.jpg';
 	} else if (numberOfWrongGuesses == 7) {
-		alert('You lost and should feel bad.');
+		alert('You lost and should feel bad. Click Start/Reset to lose again!');
 	}
 }
 

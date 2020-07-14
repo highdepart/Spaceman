@@ -2,6 +2,8 @@
 	height: 2px;
 	width: 3px;
 	padding-bottom: 30px;
+	padding-left: 125px;
+	position: static;
 }
 
 #header {
@@ -23,7 +25,7 @@
 	display: none;
 }
 #modal-textbox {
-	background-color: white;
+	background-image: url('https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/potw1836a.jpg');
 	height: 350px;
 	width: 550px;
 	border-radius: 2px;
@@ -32,6 +34,7 @@
 	padding: 2%;
 	line-height: 120%;
 	font: 'Arial';
+	color: white;
 }
 #modal-footer {
 	text-align: right;
@@ -101,4 +104,9 @@
 
 #wrongGuess7 {
 	visibility: hidden;
+}
+
+#close {
+	background: mediumaquamarine;
+	color: black;
 }
