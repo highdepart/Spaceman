@@ -28,7 +28,7 @@ close.addEventListener('click', closeModal);
 // Event Listener for Reset Button
 resetBtn.addEventListener('click', resetGame);
 
-let wordBank = ['BIKE', 'HELMET', 'DOG'];
+let wordBank = ["EARTH", "SOLAR", "NEPTUNE", "VENUS", "ASTEROID", "COMET", "PLANET", "MERCURY", "STAR", "UNIVERSE", "SATURN", "NEBULA", "PENUMBRA", "STARLIGHT", "SUN"];
 
 // Randomizes the selection from the wordBank
 const randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
@@ -81,10 +81,12 @@ function playerGuess(event) {
 // Event listener for Letter Guess button
 enterBtn.addEventListener('click', playerGuess);
 
+// Function to reset game
 function resetGame() {
 	wrongGuess.forEach((li) => (li.innerText = ' '));
-	backgroundPic.src = 'Spaceman_Slide1-final.jpg';
-}
+		backgroundPic.src == 'Spaceman_Slide1-final.jpg';
+	};
+
 // Function that updates background picture of ship.
 function updatePic() {
 	if (numberOfWrongGuesses == 1) {
@@ -99,7 +101,11 @@ function updatePic() {
 		backgroundPic.src = 'Spaceman_Slide6_final.jpg';
 	} else if (numberOfWrongGuesses == 6) {
 		backgroundPic.src = 'Spaceman_Slide7_final.jpg';
-	} else {
-		backgroundPic.src = 'Spaceman_Slide1-final.jpg';
+	} else if (numberOfWrongGuesses == 7) {
+		alert("You lost and should feel bad.");
+		
 	}
-}
+};
+function endOfGame() {
+	backgroundPic.src == 'Spaceman_Slide1-final.jpg';
+};
