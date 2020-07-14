@@ -8,6 +8,9 @@ const wordPop = document.getElementById('wordPop');
 const wrongGuess = document.querySelectorAll('li');
 // Grabbing Element for Reset button
 const resetBtn = document.querySelector('#resetBtn');
+// Grabbing Element for background picture
+const backgroundPic = document.querySelector('#gameBox');
+console.log(backgroundPic);
 
 //Functions for How To Play Button
 const openModal = () => {
@@ -34,6 +37,7 @@ const randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
 for (let i = 0; i < randomWordChoice.length; i++) {
 	letter = document.createElement('span');
 	letter.innerText = '_____';
+	letter.style.color = 'white';
 	letter.classList.add('letter');
 	wordPop.appendChild(letter);
 }
@@ -73,6 +77,7 @@ function playerGuess(event) {
 		console.log(numberOfWrongGuesses);
 	}
 }
+
 // Event listener for Letter Guess button
 enterBtn.addEventListener('click', playerGuess);
 
