@@ -128,5 +128,8 @@ function updatePic() {
 }
 
 function endOfGame() {
-	backgroundPic.src == 'Spaceman_Slide1-final.jpg';
+	if(newWordGenerator = true) {
+		console.log("Hey hey Mike");
+		
+	}
 }
