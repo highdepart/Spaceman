@@ -9,7 +9,7 @@
 	display: flex;
 	justify-content: space-evenly;
 	font-size: 65px;
-	color: white
+	color: white;
 }
 #modal {
 	background-color: rgba(0, 0, 0, 0.4);
@@ -55,7 +55,7 @@
 	padding-left: 40px;
 	font-size: 25px;
 	font-family: 'Monoton', cursive;
-	color:white
+	color: white;
 }
 #resetBtn {
 	padding: 14px 18px;
@@ -78,14 +78,12 @@
 	font-family: 'Megrim', cursive;
 	font-size: 20px;
 	font-weight: bolder;
-	color: white
+	color: white;
 }
 .lettersGuessedArea {
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
-	
-	
 }
 .letter {
 	margin: 10px;
@@ -99,5 +97,4 @@
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-
 }
