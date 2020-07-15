@@ -14,6 +14,8 @@ const backgroundPic = document.querySelector('.gameBox');
 const winnerModal = document.getElementById('youWonModal');
 // Grabbing Element for close button within winning Modal
 const closeWinningMod = document.getElementById('closeWinningModal');
+// Variable that holds user Guesses
+let userGuesses = [];
 
 //Functions for How To Play Button
 const openModal = () => {
@@ -55,10 +57,15 @@ function newWordGenerator() {
 		wordPop.appendChild(letter);
 	}
 }
-
+// Function that displays modal when player wins.
 function winningAlert() {
-	if (userInput === randomWordChoiceLetters[5]) {
-		console.log('howdy howdy');
+	winnerModal.style.display = 'block';
+}
+
+// Function that determines if player won
+function checkWin() {
+	if (userGuesses.length === randomWordChoice.length) {
+		return winningAlert();
 	}
 }
 
@@ -84,28 +91,39 @@ function playerGuess(event) {
 
 	if (userInput === randomWordChoiceLetters[0]) {
 		blankSpaces[0].innerText = userInput;
+		userGuesses.push(userInput);
 	} else if (userInput === randomWordChoiceLetters[1]) {
 		blankSpaces[1].innerText = userInput;
+		userGuesses.push(userInput);
 	} else if (userInput === randomWordChoiceLetters[2]) {
 		blankSpaces[2].innerText = userInput;
+		userGuesses.push(userInput);
 	} else if (userInput === randomWordChoiceLetters[3]) {
 		blankSpaces[3].innerText = userInput;
+		userGuesses.push(userInput);
 	} else if (userInput === randomWordChoiceLetters[4]) {
 		blankSpaces[4].innerText = userInput;
+		userGuesses.push(userInput);
 	} else if (userInput === randomWordChoiceLetters[5]) {
 		blankSpaces[5].innerText = userInput;
+		userGuesses.push(userInput);
 	} else if (userInput === randomWordChoiceLetters[6]) {
 		blankSpaces[6].innerText = userInput;
+		userGuesses.push(userInput);
 	} else if (userInput === randomWordChoiceLetters[7]) {
 		blankSpaces[7].innerText = userInput;
+		userGuesses.push(userInput);
 	} else if (userInput === randomWordChoiceLetters[8]) {
 		blankSpaces[8].innerText = userInput;
+		userGuesses.push(userInput);
 	} else {
 		wrongGuess[numberOfWrongGuesses].innerText = userInput;
 		numberOfWrongGuesses++;
 		updatePic();
 	}
+	checkWin();
 }
+
 // Event listener for Letter Guess button
 enterBtn.addEventListener('click', playerGuess);
 

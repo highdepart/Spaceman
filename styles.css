@@ -119,7 +119,7 @@
 	width: 100%;
 	z-index: 1;
 	overflow: auto;
-	display: hidden;
+	display: none;
 }
 #modal_textboxForWinning{ 
 	background-color: white;
