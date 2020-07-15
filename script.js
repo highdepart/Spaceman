@@ -10,6 +10,11 @@ const wrongGuess = document.querySelectorAll('li');
 const resetBtn = document.querySelector('#resetBtn');
 // Grabbing Element for background picture
 const backgroundPic = document.querySelector('.gameBox');
+// Grabbing Element for winning Modal box
+const winnerModal = document.getElementById('youWonModal');
+// Grabbing Element for close button within winning Modal
+const closeWinningMod = document.getElementById('closeWinningModal');
+
 //Functions for How To Play Button
 const openModal = () => {
 	modal.style.display = 'block';
@@ -17,6 +22,14 @@ const openModal = () => {
 const closeModal = () => {
 	modal.style.display = 'none';
 };
+
+// Function for closing the winning modal
+const closeWinningModal = () => {
+	modal.style.display = 'none';
+};
+
+// Event Listen for Winning Modal
+closeWinningMod.addEventListener('click', closeWinningModal);
 
 //Event Listeners for How to Play Button
 openBtn.addEventListener('click', openModal);
@@ -29,18 +42,14 @@ resetBtn.addEventListener('click', resetGame);
 let wordBank = [
 	'EARTH',
 	'SOLAR',
-	'NEPTUNE',
 	'VENUS',
 	'ASTEROID',
 	'COMET',
 	'PLANET',
-	'MERCURY',
 	'STAR',
-	'UNIVERSE',
 	'SATURN',
 	'NEBULA',
 	'PENUMBRA',
-	'STARLIGHT',
 	'SUN',
 ];
 
@@ -58,6 +67,13 @@ function newWordGenerator() {
 		wordPop.appendChild(letter);
 	}
 }
+
+function winningAlert() {
+	if (newWordGenerator == true) {
+		console.log('howdy howdy');
+	}
+}
+
 // Generates the new word on the page
 newWordGenerator();
 
@@ -92,6 +108,10 @@ function playerGuess(event) {
 		blankSpaces[5].innerText = userInput;
 	} else if (userInput === randomWordChoiceLetters[6]) {
 		blankSpaces[6].innerText = userInput;
+	} else if (userInput === randomWordChoiceLetters[7]) {
+		blankSpaces[7].innerText = userInput;
+	} else if (userInput === randomWordChoiceLetters[8]) {
+		blankSpaces[8].innerText = userInput;
 	} else {
 		wrongGuess[numberOfWrongGuesses].innerText = userInput;
 		numberOfWrongGuesses++;
@@ -125,7 +145,8 @@ function updatePic() {
 	} else if (numberOfWrongGuesses == 7) {
 		alert('You lost and should feel bad. Click Start/Reset to lose again!');
 	}
+}
 // Clears the input box for the user
 function clearButton() {
-	document.getElementById("myInput").value = "";
-};
+	document.getElementById('myInput').value = '';
+}
