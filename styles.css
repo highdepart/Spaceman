@@ -122,10 +122,14 @@
 	display: none;
 }
 #modal_textboxForWinning{ 
-	background-color: white;
+	background-image: url("https://64.media.tumblr.com/c204a012909fbedcfe42b4f5c2e74cb6/tumblr_oumrc9ua2l1qeyvpto2_r1_500.gifv");
 	height: 350px;
 	width: 550px;
 	border-radius: 2px;
 	margin: 150px auto;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	color: white
+}
+.closeWinningModal {
+	color: white
 }

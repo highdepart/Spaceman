@@ -41,10 +41,29 @@ close.addEventListener('click', closeModal);
 // Event Listener for Reset Button
 resetBtn.addEventListener('click', resetGame);
 
-let wordBank = ['ACUMEN', 'ABSURD', 'ACORNS', 'ALBINO'];
+let wordBank = [
+	'ACUMEN',
+	'ABSURD',
+	'ACORNS',
+	'ALBINO',
+	'ATOMIC',
+	'HANGER',
+	'KNOTS',
+	'PAINT',
+	'PANTS',
+	'HALO',
+	'BEAK',
+	'RAINBOW',
+	'REMATCH',
+	'MANGO',
+	'MACRO',
+];
 
 // Randomizes the selection from the wordBank
-const randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
+
+// const randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
+
+let randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
 
 // function that takes randomized word and changes into __
 function newWordGenerator() {
@@ -57,6 +76,7 @@ function newWordGenerator() {
 		wordPop.appendChild(letter);
 	}
 }
+
 // Function that displays modal when player wins.
 function winningAlert() {
 	winnerModal.style.display = 'block';
@@ -127,12 +147,16 @@ function playerGuess(event) {
 // Event listener for Letter Guess button
 enterBtn.addEventListener('click', playerGuess);
 
+console.log(randomWordChoice);
+
 // Function to reset game
 function resetGame() {
 	numberOfWrongGuesses = 0;
-	newWordGenerator();
 	wrongGuess.forEach((li) => (li.innerText = ' '));
 	backgroundPic.src = 'Spaceman_Slide1-final.jpg';
+	randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
+	newWordGenerator();
+	console.log(randomWordChoice);
 }
 
 // Function that updates background picture of ship.
@@ -150,7 +174,9 @@ function updatePic() {
 	} else if (numberOfWrongGuesses == 6) {
 		backgroundPic.src = 'Spaceman_Slide7_final.jpg';
 	} else if (numberOfWrongGuesses == 7) {
-		alert('You lost and should feel bad. Click Start/Reset to lose again!');
+		alert(
+			'You lost and should feel bad. You also let everyone down....To make up for it, you should click Start/Reset to lose again!'
+		);
 	}
 }
 // Clears the input box for the user
