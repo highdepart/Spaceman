@@ -39,19 +39,7 @@ close.addEventListener('click', closeModal);
 // Event Listener for Reset Button
 resetBtn.addEventListener('click', resetGame);
 
-let wordBank = [
-	'EARTH',
-	'SOLAR',
-	'VENUS',
-	'ASTEROID',
-	'COMET',
-	'PLANET',
-	'STAR',
-	'SATURN',
-	'NEBULA',
-	'PENUMBRA',
-	'SUN',
-];
+let wordBank = ['ACUMEN', 'ABSURD', 'ACORNS', 'ALBINO'];
 
 // Randomizes the selection from the wordBank
 const randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
@@ -69,7 +57,7 @@ function newWordGenerator() {
 }
 
 function winningAlert() {
-	if (newWordGenerator == true) {
+	if (userInput === randomWordChoiceLetters[5]) {
 		console.log('howdy howdy');
 	}
 }
@@ -123,6 +111,7 @@ enterBtn.addEventListener('click', playerGuess);
 
 // Function to reset game
 function resetGame() {
+	numberOfWrongGuesses = 0;
 	newWordGenerator();
 	wrongGuess.forEach((li) => (li.innerText = ' '));
 	backgroundPic.src = 'Spaceman_Slide1-final.jpg';
