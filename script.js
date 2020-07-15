@@ -25,7 +25,7 @@ const closeModal = () => {
 
 // Function for closing the winning modal
 const closeWinningModal = () => {
-	modal.style.display = 'none';
+	winnerModal.style.display = 'none';
 };
 
 // Event Listen for Winning Modal
