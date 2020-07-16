@@ -59,10 +59,6 @@ let wordBank = [
 	'MACRO',
 ];
 
-// Randomizes the selection from the wordBank
-
-// const randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
-
 let randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
 
 // function that takes randomized word and changes into __
@@ -147,8 +143,6 @@ function playerGuess(event) {
 // Event listener for Letter Guess button
 enterBtn.addEventListener('click', playerGuess);
 
-console.log(randomWordChoice);
-
 // Function to reset game
 function resetGame() {
 	numberOfWrongGuesses = 0;
@@ -156,7 +150,6 @@ function resetGame() {
 	backgroundPic.src = 'Spaceman_Slide1-final.jpg';
 	randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
 	newWordGenerator();
-	console.log(randomWordChoice);
 }
 
 // Function that updates background picture of ship.
