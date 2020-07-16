@@ -150,6 +150,7 @@ function resetGame() {
 	backgroundPic.src = 'Spaceman_Slide1-final.jpg';
 	randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
 	newWordGenerator();
+	userGuesses = [];
 }
 
 // Function that updates background picture of ship.
