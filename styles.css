@@ -33,7 +33,7 @@
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 	padding: 2%;
 	line-height: 120%;
-	font: 'Arial';
+	font-family: 'Arial';
 	color: white;
 }
 #modal-footer {
@@ -54,7 +54,6 @@
 }
 #lettersGuessed {
 	display: flex;
-	align-content: column;
 	padding-left: 40px;
 	font-size: 25px;
 	font-family: 'Monoton', cursive;
