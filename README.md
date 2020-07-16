@@ -39,3 +39,17 @@ My app is called Spaceman. It's a game where players are provided a string of b
 - As a developer, I would like animation of the spaceship being built, throughout the game.
 - As a developer, I would like to build different levels of difficulty.
 - As a developer, I would like my spaceman to taunt the player on wrongly guessed letters.
+
+#### Technologies Used
+
+- HTML
+- CSS
+- Javascript
+
+#### Approach Taken
+
+- I initially sat down and actually played a game of "Spaceman", thinking through what the major components of the game would be. I also thought about what some of the major or main variables would be for the game and how they would interact within the functions. I found though, that my initial foundation was a little bit off and I needed more nuanced functions, that handled smaller aspects. So although I initially when in with a plan, I had to continuously update said plan to get the functionality that I desired.
+
+#### Unsolved problems
+
+- Although the majority of my words use a letter character only once, I was having trouble with words that had multiple of the same character, I.E. Apple or Ball. I also was having a hard time populating the full word, when a player lost, revealing what the word was. Lastly, in the UserInput box, I struggled to get it to limit the choice to one character. At this current time, you can upload a whole string of words. It will come back incorrect but still not what I would like.

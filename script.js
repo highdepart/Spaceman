@@ -141,7 +141,7 @@ function playerGuess(event) {
 }
 
 // Event listener for Letter Guess button
-enterBtn.addEventListener('click', playerGuess);
+enterBtn.addEventListener('click', playerGuess);  
 
 // Function to reset game
 function resetGame() {
