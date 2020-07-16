@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Spaceman</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+		</style>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+		</style>
+	</head>
+	<body id="background">
+        <header>
+            <h1 class="animate__animated animate__heartBeat" id="header">SPACEMAN</h1>
+        </header>
+		<!-- GameBoard -->
+		<nav>
+			<form class="lettersGuessedArea">
+				<input type="text" class="input" placeholder="Letter Guess" id="myInput"></input>
+				<button class="input" id="enterGuess">Enter</button>
+			</form>
+		</nav>
+		<section class="gameBoard">
+			<span> 
+				<img src="Spaceman_Slide1-final.jpg" alt="Spaceman Start" class="gameBox" >
+			<span>
+		</section>
+		<!-- Section for Incorrect Letter Bank -->
+		<nav id="incorrectLetterBank"> <u>Incorrect Guesses </u> </nav>
+       		 <aside id="lettersGuessed">
+             	 <ol class="wrongLetters">
+                  <li id="wrongGuess1">  </li>
+                  <li id="wrongGuess2">  </li>
+                  <li id="wrongGuess3">  </li>
+                  <li id="wrongGuess4">  </li>
+                  <li id="wrongGuess5">  </li>
+				  <li id="wrongGuess6">  </li>
+				  <li id="wrongGuess7">  </li>
+              </ol>  
+		</aside>
+		<div id="youWonModal">
+			<div id="modal_textboxForWinning"> 
+				<p><a href="https://giphy.com/gifs/timanderic-tim-and-eric-wareheim-lXu72d4iKwqek">via GIPHY</a></p>
+			<a id="closeWinningModal" href="#">Close</a>
+			<h1> WELL WELL WELL, LOOK WHO WON!</h1>
+			<p>You cracked the code, congrats! Now the question is, can you do it again?</p>
+			</div>
+		</div>
+        <!-- Section for Modal How to Play Button -->
+        <button class="modal-buttons" id="howToPlayModal">How to Play</button>
+		<div id="modal">
+			<div id="modal-textbox">
+				<h1 id="htpModal">How to Play Spaceman</h1>
+					<p>
+					Your objective, if you accept, is to keep the Spaceman from leaving the planet! He has agreed to stay under one condition, you guess the word he is thinking.  It's almost like you're Amy Adams in the movie, "Arrival" but at the same time, not really.
+
+					<p>To make it a little bit easier on yourself, he is allowing you to guess one letter at a time, but be careful! You can only make six mistakes before he takes off, leaving you as confused as I was at the end of "Arrival". 
+					</p>
+					<p>	There will be no, "Houston, we have a problem" here, but just incase there is, you can restart whenever you'd like! 
+					</p>
+					Now go be like the crazy guy in Independence day and make us all proud. Best of luck!
+					</p>
+				<div id="modal-footer">
+					<button class="modal-buttons" id="close" href="#">Close</button>
+				</div>
+			</div>
+		</div>
+        <section id="reset"></section>
+            <button id="resetBtn">Start/Reset</button>
+		<footer id="wordPop"></footer>
+		
+			<script src="script.js"></script>
+		
+	</body>
+</html>
