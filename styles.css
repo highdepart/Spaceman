@@ -44,7 +44,7 @@
 }
 .modal-buttons {
 	padding: 14px 18px;
-	background-color: #00e043;
+	background-color: blue;
 	border: none;
 	outline: none;
 	border-radius: 90px;
@@ -61,7 +61,7 @@
 }
 #resetBtn {
 	padding: 14px 18px;
-	background-color: #00e043;
+	background-color: blue;
 	border: none;
 	outline: none;
 	border-radius: 90px;
