@@ -147,7 +147,7 @@ enterBtn.addEventListener('click', playerGuess);
 function resetGame() {
 	numberOfWrongGuesses = 0;
 	wrongGuess.forEach((li) => (li.innerText = ' '));
-	backgroundPic.src = 'Spaceman_Slide1-final.jpg';
+	backgroundPic.src = 'red.jpg';
 	randomWordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
 	newWordGenerator();
 	userGuesses = [];
@@ -169,7 +169,7 @@ function updatePic() {
 		backgroundPic.src = '6.jpg';
 	} else if (numberOfWrongGuesses == 7) {
 		alert(
-			'You lost and should feel bad. You also let everyone down....To make up for it, you should click Start/Reset to lose again!'
+			'You let our fellow astronaut die :(. Luckily you get a second try! tap the restart button!'
 		);
 	}
 }
