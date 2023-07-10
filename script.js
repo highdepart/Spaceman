@@ -156,17 +156,17 @@ function resetGame() {
 // Function that updates background picture of ship.
 function updatePic() {
 	if (numberOfWrongGuesses == 1) {
-		backgroundPic.src = 'Spaceman_Slide2_final.png';
+		backgroundPic.src = '1.jpg';
 	} else if (numberOfWrongGuesses == 2) {
-		backgroundPic.src = 'Spaceman_Slide3_final.jpg';
+		backgroundPic.src = '2.jpg';
 	} else if (numberOfWrongGuesses == 3) {
-		backgroundPic.src = 'Spaceman_Slide4_final.jpg';
+		backgroundPic.src = '3.jpg';
 	} else if (numberOfWrongGuesses == 4) {
-		backgroundPic.src = 'Spaceman_Slide5_final.jpg';
+		backgroundPic.src = '4.jpg';
 	} else if (numberOfWrongGuesses == 5) {
-		backgroundPic.src = 'Spaceman_Slide6_final.jpg';
+		backgroundPic.src = '5.jpg';
 	} else if (numberOfWrongGuesses == 6) {
-		backgroundPic.src = 'Spaceman_Slide7_final.jpg';
+		backgroundPic.src = '6.jpg';
 	} else if (numberOfWrongGuesses == 7) {
 		alert(
 			'You lost and should feel bad. You also let everyone down....To make up for it, you should click Start/Reset to lose again!'
