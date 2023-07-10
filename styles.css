@@ -6,6 +6,10 @@
 	position: static;
 }
 
+#body {
+	background-image: url('red.jpg');
+}
+
 #header {
 	font-family: 'Megrim', cursive;
 	display: flex;
